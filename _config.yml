@@ -1,0 +1,33 @@
+exclude:
+- README.md
+- LICENSE
+
+plugins:
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-default-layout
+- jekyll-include-cache
+
+encoding: utf-8
+title: Sudoers Group @ UTD
+lang: en-US
+
+logo: "/assets/tux_logo.png"
+favicon: "/assets/favicon.png"
+
+navigation_header:
+  Home: /
+  About: /about.html
+  Events: /events/
+  Categories: /categories.html
+
+navigation_footer:
+  The Sudoers Group @ UTD: /
+
+paginate: 2
+paginate_path: "/events/page:num"
+collections:
+  posts:
+    title: Events
+    output: true
+    feature_image: "/assets/bee_careful.png"
