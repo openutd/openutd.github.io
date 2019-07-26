@@ -24,8 +24,9 @@ navigation_header:
 navigation_footer:
   The Sudoers Group @ UTD: /
 
-paginate: 2
+paginate: 3
 paginate_path: "/events/page:num"
+future: true
 collections:
   posts:
     title: Events
