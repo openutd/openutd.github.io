@@ -1,0 +1,134 @@
+---
+layout: slide
+title: Linux Birthday Introduction
+description: Introduction to the Sudoers Group
+theme: white
+theme-override: linux-birthday
+transition: slide
+---
+
+<span id="footer">
+    <span class="footer-text">slides url:
+        <a>https://sudoers.utdallas.edu/slides/linux-birthday.html</a></span>
+    <span class="footer-text" id="video-cite">Video credit to the STK team:
+        <a
+            href="https://supertuxkart.net">https://supertuxkart.net</a></span>
+</span>
+
+<section>
+    <h1>Happy Birthday Linux!</h1>
+</section>
+
+<section>
+    <section>
+        <p>On August 25th, 1991...</p>
+
+        <p class="fragment fade-in"> A 21 year-old Finnish student sends out a
+            message to the <code style="color:#d14842">comp.os.minix</code> message
+            board...</p>
+    </section>
+
+    <section>
+        <blockquote style="text-align:left">
+            Hello everybody out there using minix
+        </blockquote>
+    </section>
+
+    <section>
+        <blockquote style="text-align:left">
+            I'm doing a <span class="fragment highlight-red">(free) operating system</span>
+            (<span class="fragment highlight-red">just a hobby, won't be big and professional
+            like gnu</span>) for 386(486) AT clones.
+        </blockquote>
+    </section>
+
+    <section>
+        <blockquote style="text-align:left">
+            PS.  Yes - it's free of any minix code, and it has a multi-threaded fs. 
+            <span class="fragment highlight-red">It is NOT protable</span> (uses 386 task
+            switching etc), <span class="fragment highlight-red">and it probably never will
+                support anything other than AT-harddisks</span>, as that's all I have
+            :-(.<br><br>
+
+            &mdash;Linus (torvalds@kruuna.helsinki.fi)
+        </blockquote>
+    </section>
+</section>
+
+<section>
+    <section style="background-color:rgba(236, 236, 236, .9)">
+        <h1 style="background-color:transparent">The Sudoers Group</h1>
+        <h2 style="background-color:transparent">Who We Are</h2>
+    </section>
+
+    <section>
+        <p style="font-size:2.5rem">We are a student organization dedicated to teaching and advocating free
+            and open-source software on campus.</p>
+    </section>
+
+    <section style="background-color:rgba(236, 236, 236, .9)">
+        <h2 style="background-color:transparent">Officers</h2>
+        <table style="font-size:x-large">
+            <tr>
+                <td>President</td>
+                <td>Calvin Ross (<a>cjayross@utdallas.edu</a>)</td>
+            </tr>
+            <tr>
+                <td>Vice President</td>
+                <td>Logan Moon (<a>lkm160130@utdallas.edu</a>)</td>
+            </tr>
+            <tr>
+                <td>Treasurer</td>
+                <td>Alejandro Arredondo (<a>Alejandro.Arredondo@utdallas.edu</a>)</td>
+            </tr>
+            <tr>
+                <td>Secretary</td>
+                <td>Nathan Snead (<a>Jonathan.Snead@utdallas.edu</a>)</td>
+            </tr>
+            <tr>
+                <td>Committee Chair</td>
+                <td>Michael Murphey (<a>Michael.Murphey@utdallas.edu</a>)</td>
+            </tr>
+        </table>
+    </section>
+</section>
+
+<section data-background-image="/slides/assets/why_linux_is_awesome_slide.png">
+</section>
+
+<section data-background-video="/slides/assets/supertuxkart_video.mp4"
+         data-background-video-muted
+         data-background-video-loop>
+    <section>
+        <h1>SuperTuxKart Tournament</h1>
+    </section>
+
+    <section>
+        <p>The tournament bracket is available at<br>
+            <a
+                href="https://challonge.com/vr0qydvp">https://challonge.com/vr0qydvp</a></p>
+    </section>
+</section>
+
+<script>
+ Reveal.addEventListener('slidechanged', function(event) {
+     window.setTimeout(function(){
+         /* var videoCite = $('<span class="footer-text" id="video-cite">Video credit to the STK team: <em><a href="https://supertuxkart.net">https://supertuxkart.net</a></em></span>'); */
+         var stackedBackgrounds = $('body > div > div.backgrounds > div.stack');
+         stackedBackgrounds.each(function(){
+             var me = $(this);
+             var video = me.find('video').get(0);
+             if (video){
+                 if(me.hasClass('present')) {
+                     $('#video-cite').fadeIn(200);
+                     video.play();
+                 }
+                 else {
+                     $('#video-cite').fadeOut(200);
+                     video.load();
+                 }
+             }
+         });
+     }, 300);
+ });
+</script>

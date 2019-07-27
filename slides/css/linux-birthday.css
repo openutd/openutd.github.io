@@ -1,0 +1,42 @@
+body {
+    background-image: url("/slides/assets/confetti.png");
+    background-repeat: repeat;
+    background-size: 1028px 856px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal p,
+.reveal blockquote {
+    background-color: rgba(236, 236, 236, .9);
+}
+
+.reveal section img {
+    border: none;
+    border-radius: 1rem;
+    background-color: rgba(236, 236, 236, .9);
+    margin: 0;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-size: large;
+    width: 100%;
+}
+
+.footer-text {
+    float: left;
+    padding: 0 .5rem 0 .5rem;
+    background-color: rgba(236, 236, 236, .9);
+}
+
+#video-cite {
+    display: none;
+    float: right;
+}
