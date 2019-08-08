@@ -1,18 +1,24 @@
 // Background colours
-$backgroundColour: #141a1b;
-$codeBackgroundColour: #fafafa;
-$featureBackgroundColour: #141a1b;
+// $backgroundColour: #141a1b;
+// $codeBackgroundColour: #fafafa;
+// $featureBackgroundColour: #141a1b;
+// $accentColour: #55ffff;
+// $footerColour: #0e1313;
+
+$backgroundColour: #f3f3f3;
+$codeBackgroundColour: #e6e6e6;
+$featureBackgroundColour: #f3f3f3;
 $accentColour: #55ffff;
-$footerColour: #0e1313;
+$footerColour: #f3f3f3;
 
 // Text colours
-$headingColour: #c7c2c1;
-$bodyColour: #c7c2c1;
-$linkColour: #46d1d1;
-$hoverColour: #55ffff;
+$headingColour: #222;
+$bodyColour: #222;
+$linkColour: #2a76dd;
+$hoverColour: #98bdef;
 $focusColour: #5555ff;
 $captionColour: #a8adac;
-$white: #ebe5e4;
+$white: #ccc;
 
 @font-face {
   font-family: "Droid Sans Mono";
@@ -36,7 +42,7 @@ $headingtype: (
 );
 
 $monospacetype: (
-  font-family: 'Menlo, monospace',
+  font-family: "Menlo, monospace",
   regular: 400,
   cap-height: 0.68
 );

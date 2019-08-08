@@ -24,10 +24,14 @@
     <link rel="icon" href="{{ site.favicon }}" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="{{ site.favicon }}" sizes="32x32">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     {% include site-before-start.html %}
   </head>
 
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
+    {% include site-icons.svg %}
+
     {{ content }}
 
     {% include site-before-end.html %}

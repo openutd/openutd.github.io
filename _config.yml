@@ -9,7 +9,7 @@ plugins:
 - jekyll-include-cache
 
 encoding: utf-8
-title: Sudoers Group @ UTD
+title: OpenUTD
 lang: en-US
 
 logo: "/assets/tux_logo.png"
@@ -22,7 +22,7 @@ navigation_header:
   Categories: /categories.html
 
 navigation_footer:
-  The Sudoers Group @ UTD: /
+  OpenUTD: /
 
 paginate: 3
 paginate_path: "/events/page:num"
@@ -31,4 +31,3 @@ collections:
   posts:
     title: Events
     output: true
-    feature_image: "/assets/bee_careful.png"

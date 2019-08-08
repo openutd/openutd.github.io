@@ -477,3 +477,22 @@ pre code {
     overflow-x: scroll;
   }
 }
+
+#opening-text {
+    text-align: center;
+}
+
+#org-title-card {
+    font-size: 14vw;
+    font-weight: 300;
+    vertical-align: bottom;
+    line-height: initial;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 1032px) {
+    #org-title-card {
+        font-size: 8.5rem;
+    }
+}
