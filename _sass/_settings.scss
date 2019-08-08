@@ -14,19 +14,24 @@ $focusColour: #5555ff;
 $captionColour: #a8adac;
 $white: #ebe5e4;
 
+@font-face {
+  font-family: "Droid Sans Mono";
+  src: url("/assets/fonts/DroidSansMono.ttf");
+}
+
 // Typography
 $bodytype: (
-  font-family: 'Open Sans, serif',
-  regular: 300,
-  bold: 700,
+  font-family: "Droid Sans Mono",
+  regular: 200,
+  bold: 600,
   italic: italic,
   cap-height: 0.75
 );
 
 $headingtype: (
-  font-family: 'Ubuntu, serif',
-  regular: 400,
-  bold: 700,
+  font-family: "Droid Sans Mono",
+  regular: 300,
+  bold: 600,
   cap-height: 0.75
 );
 
@@ -37,5 +42,5 @@ $monospacetype: (
 );
 
 // Font import, if you're using a non-standard web font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+// @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
