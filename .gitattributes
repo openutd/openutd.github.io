@@ -1,0 +1,16 @@
+slides/assets/arch_theme.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/windows_start_menu.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/arch_installer.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/supertuxkart_video.mp4 filter=lfs diff=lfs merge=lfs -text
+slides/assets/why_linux_is_awesome_slide.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/wsl.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/zuckerburg.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/confetti.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/command_prompt.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/ransomware.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/blender.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/arch_logo.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/mint_desktop.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/polybar_config.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/ubuntu_desktop.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/arch_desktop.png filter=lfs diff=lfs merge=lfs -text
