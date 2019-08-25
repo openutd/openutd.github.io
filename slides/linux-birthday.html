@@ -9,7 +9,7 @@ transition: slide
 
 <span id="footer">
     <span class="footer-text">slides url:
-        <a>https://open.utdallas.edu/slides/linux-birthday.html</a></span>
+        <a>https://sudoers.utdallas.edu/slides/linux-birthday.html</a></span>
     <span class="footer-text" id="video-cite">Video credit to the STK team:
         <a
             href="https://supertuxkart.net">https://supertuxkart.net</a></span>
@@ -53,6 +53,9 @@ transition: slide
             &mdash;Linus (torvalds@kruuna.helsinki.fi)
         </blockquote>
     </section>
+    <section>
+      <img src="/slides/assets/IBM_PC_AT.png">
+    </section>
 </section>
 
 <section>
@@ -91,11 +94,6 @@ transition: slide
             </tr>
         </table>
     </section>
-
-    <section>
-        <p>We will be hosting biweekly talks in <span style="color:#ff2c2d">CB3 1.302</span></p>
-        <img src="/slides/assets/cb3_map.png">
-    </section>
 </section>
 
 <section data-background-image="/slides/assets/why_linux_is_awesome_slide.png">
@@ -118,7 +116,6 @@ transition: slide
 <script>
  Reveal.addEventListener('slidechanged', function(event) {
      window.setTimeout(function(){
-         /* var videoCite = $('<span class="footer-text" id="video-cite">Video credit to the STK team: <em><a href="https://supertuxkart.net">https://supertuxkart.net</a></em></span>'); */
          var stackedBackgrounds = $('body > div > div.backgrounds > div.stack');
          stackedBackgrounds.each(function(){
              var me = $(this);
