@@ -10,4 +10,4 @@ project!
 
 Cake will also be served!
 
-Location: TBD
+Location: SSA 14.501

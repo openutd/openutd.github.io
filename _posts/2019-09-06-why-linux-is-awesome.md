@@ -6,6 +6,6 @@ categories:
 
 A talk on how Linux can transform how you think about software.
 
-Location: CB3 1.302
+Location: Galaxy Room A
 
 Time: 7-8pm
