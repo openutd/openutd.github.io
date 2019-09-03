@@ -1,5 +1,8 @@
 ---
 title: Linux Birthday Party!
+location: SSA 14.501
+time: 6-8pm
+slides: /slides/linux-birthday.html
 categories:
 - Event
 ---
@@ -9,5 +12,3 @@ tournament to celebrate Linus Torvalds' first public announcement of the Linux
 project!
 
 Cake will also be served!
-
-Location: SSA 14.501

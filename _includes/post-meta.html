@@ -12,5 +12,5 @@
 
 <small class="small post-meta">
   {% assign date_format = site.date_format | default: "%d %b %Y" %}
-  {{ categories | append: "&nbsp;&middot;&nbsp;" }}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>
+  {{ categories | append: "&nbsp;&middot;&nbsp;" }}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>{% if page.location %}, {{ page.location }}{% endif %}{% if page.time %}, {{ page.time }}{% endif %}
 </small>

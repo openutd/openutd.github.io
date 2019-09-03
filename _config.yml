@@ -18,6 +18,7 @@ favicon: "/assets/favicon.png"
 navigation_header:
   Home: /
   About: /about.html
+  Contact: /contact.html
   Events: /events/
   Categories: /categories.html
 
