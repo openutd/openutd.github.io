@@ -2,6 +2,7 @@
 title: Why Linux is Awesome
 location: Galaxy Room A
 time: 7-8pm
+slides: /slides/why-linux-is-awesome.html
 categories:
 - Talk
 ---
