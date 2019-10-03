@@ -3,3 +3,5 @@ _site
 .envrc
 .sass-cache
 .jekyll-cache
+Gemfile.lock
+vendor/
