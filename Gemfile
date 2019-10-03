@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "github-pages"
+gem "github-pages", "~> 200", group: :jekyll_plugins
 gem "jekyll"
 gem "jekyll-paginate"
 gem "jekyll-seo-tag"

@@ -1,6 +1,8 @@
 exclude:
 - README.md
 - LICENSE
+- vendor
+- reveal.js
 
 plugins:
 - jekyll-paginate
