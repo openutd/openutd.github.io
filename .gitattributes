@@ -14,3 +14,12 @@ slides/assets/mint_desktop.png filter=lfs diff=lfs merge=lfs -text
 slides/assets/polybar_config.png filter=lfs diff=lfs merge=lfs -text
 slides/assets/ubuntu_desktop.png filter=lfs diff=lfs merge=lfs -text
 slides/assets/arch_desktop.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/IBM_PC_AT.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/kali_linux.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/linuxmasterrace.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/manjaro_desktop.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/blockchain_logo.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/csg_logo.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/windows_update.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/fedora_desktop.png filter=lfs diff=lfs merge=lfs -text
+slides/assets/tux_logo.png filter=lfs diff=lfs merge=lfs -text

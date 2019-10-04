@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Droid Sans Mono";
+    src: url("/assets/fonts/DroidSansMono.ttf");
+}
+
+body {
+    background-color: #0a0f35;
+    color: #f3f3f3;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal ol,
+.reveal p {
+    font-family: "Droid Sans Mono";
+    font-weight: 200;
+    text-transform: none;
+    color: #f3f3f3;
+}
+
+.reveal a {
+    color:#98bdef;
+}
+
+.reveal section img {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .question-mark {
+    position: absolute;
+    font-size: 0.6em;
+    opacity: 0.5;
+}
+
+.reveal ul.procon {
+    margin: 0;
+    font-family: "Droid Sans Mono";
+    list-style: none;
+    color: #f3f3f3;
+}
+
+.reveal li.plus:before {
+    content: "+";
+    margin-right: 12px;
+}
+
+.reveal li.minus:before {
+    content: "-";
+    margin-right: 12px;
+}
+
+#footer {
+    font-family: "Droid Sans Mono";
+    font-weight: 200;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    font-size: 1.2rem;
+    color: #f3f3f3;
+}
