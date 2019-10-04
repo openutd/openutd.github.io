@@ -1,6 +1,6 @@
 ---
 title: Git for Mere Mortals
-location: UTD Makerspace (SPN 2.222)
+location: UTD Makerspace
 time: 7-8pm
 categories:
 - Talk
@@ -8,7 +8,7 @@ categories:
 
 An introduction to using `git` from the command line.
 
-Most open source software utilizes `git` for its version control.
-As such, it is imperative that developers should become well acquainted
-with the nuances around all that can be done to optimize your contributions
-to projects.
+There are a lot of nuances to `git`, and when used improperly, it can cause
+chaos for both yourself and your fellow contributers. As such, it is the
+responsiblility of any aspiring developer to make sure they know the
+ins-and-outs of `git` so that they keep their projects clean and organized.
