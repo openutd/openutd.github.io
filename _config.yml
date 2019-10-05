@@ -15,6 +15,7 @@ lang: en-US
 
 logo: "/assets/tux_logo.png"
 favicon: "/assets/favicon.png"
+repository: "openutd/openutd.github.io"
 
 navigation_header:
   Home: /
