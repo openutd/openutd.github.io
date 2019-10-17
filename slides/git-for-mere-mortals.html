@@ -1,0 +1,201 @@
+---
+layout: slide
+title: Git For Mere Mortals
+description: A presentation about Git
+theme: white
+transition: slide
+---
+
+<span id="footer">
+    <span class="footer-text">slides url:
+        <a>https://sudoers.utdallas.edu/slides/git-for-mere-mortals.html</a></span>
+</span>
+
+<section>
+    <section>
+        <h1>Git For Mere Mortals</h1>
+        <aside class="notes">
+            <p></p>
+        </aside>
+    </section>
+
+    <section>
+        <div style="text-align:left">
+            <p>Host: OpenUTD</p>
+            <p>Speaker: C. Michael Murphey</p>
+            <p>Contact: michael@murphey.org</p>
+        </div>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Here's a few small tips I've picked up along the way</h2>
+    </section>
+
+    <section>
+        <h2>git stash is your friend</h2>
+        <div>
+            <p>git stash save "Refactor the thing"</p>
+            <p>git stash list</p>
+            <p>git stash apply</p>
+            <p>git stash push</p>
+    </section>
+
+    <section>
+        <h2>Have an excessive number of commits in a pull request?</h2>
+        <div>
+            <p>Happens to the best of us...</p>
+            <p>git merge --squash</p>
+            <p>Note: this creates a completely new commit!!</p>
+        </div>
+    </section>
+
+    <section>
+    	<h2>While we're at it, let's talk about merges</h2>
+        <div>
+            <p>git merge --ff-only # my favorite :)</p>
+            <p>git merge --ff # default</p>
+            <p>git merge --no-ff</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>I messed up! What do I do?</h2>
+        <div>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>How much do you hate your changes?</h2>
+        <div>
+            <p>git reset commitsha</p>
+            <p>git reset HEAD^1</p>
+            <p>git reset HEAD^1 --soft</p>
+            <p>git reset HEAD^1 --hard</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>The nuclear option</h2>
+        <div>
+            <p>`git clean -dfx`</p>
+        </div>
+    </section>
+
+    <section>
+    	<h2>Just a single file?</h2>
+        <div>
+            <p>git checkout file.txt</p>
+            <p>git checkout -- file-with-same-name-as-branch</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>OK, what does `git checkout -` do?</h2>
+        <div>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>My pull request for my feature branch has merge conflicts</h2>
+        <div>
+            <p>git stash save "Any changes I might have in progress"</p>
+            <p>git rebase master</p>
+            <p>Resolve merge conflicts</p>
+            <p>git rebase --continue</p>
+            <p>Note: This replaces a commit!!</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Amending commits</h2>
+        <div>
+            <p>git commit --amend</p>
+            <p>You get to change the contents of the commit and/or change the commit message</p>
+            <p>Note: This replaces a commit!!</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>It's time to have "The Talk"</h2>
+        <div>
+            <p>Rewriting history is dangerous</p>
+            <p>Some people think it's wrong</p>
+            <p>Never do it on a branch that's not yours</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Help? My push is being rejected after I replaced a commit?</h2>
+        <div>
+            <p>Use `git push --force-with-lease`</p>
+        </div>
+    </section>
+
+    <section>
+    	<h2>What's the difference between --force and --force-with-lease</h2>
+        <div>
+            <p>--force-with-lease is safer</p>
+            <p>It ensures that the commits on the server are what we expect</p>
+        </div>
+    </section>
+
+    <section>
+    	<h2>.git/info/exclude</h2>
+        <div>
+            <p>You can edit .git/info/exclude if you want to ignore new files but don't want to edit .gitignore</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Problem: Anyone can commit as anyone</h2>
+        <div>
+            <p>All you have to do is change user.name and user.email</p>
+            <p>git-blame-someone-else makes trolling easy</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Solution: GPG sign commits</h2>
+        <div>
+            <p>GPG signatures for commits are built into git</p>
+            <p>Many sites like GitHub now show GPG signatures</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Configure git for use with GPG</h2>
+        <div>
+            <p>`git config --global user.signingkey KEYIDHERE`</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Now, you can sign your commits!</h2>
+        <div>
+            <p>`git commit -S`</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Profit!</h2>
+        <div>
+            <p>`git log --show-signature`</p>
+            <p>Add your public key to your GitHub account and verify signatures in the GitHub UI</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2>Hub</h2>
+        <div>
+            <p>`hub clone caffeine-overload/bandinchina`</p>
+            <p>`hub fetch origin,upstream`</p>
+            <p>`hub pull-request`</p>
+        </div>
+    </section>
+    
+    <section>
+        <h1>Thank You</h1>
+    </section>
+</section>
