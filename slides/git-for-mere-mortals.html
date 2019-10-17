@@ -36,17 +36,17 @@ transition: slide
     <section>
         <h2>git stash is your friend</h2>
         <div>
-            <p>git stash save "Refactor the thing"</p>
-            <p>git stash list</p>
-            <p>git stash apply</p>
-            <p>git stash push</p>
+            <p><code>git stash save "Refactor the thing"</code></p>
+            <p><code>git stash list</code></p>
+            <p><code>git stash apply</code></p>
+            <p><code>git stash push</code></p>
     </section>
 
     <section>
         <h2>Have an excessive number of commits in a pull request?</h2>
         <div>
             <p>Happens to the best of us...</p>
-            <p>git merge --squash</p>
+            <p><code>git merge --squash</code></p>
             <p>Note: this creates a completely new commit!!</p>
         </div>
     </section>
@@ -54,9 +54,9 @@ transition: slide
     <section>
     	<h2>While we're at it, let's talk about merges</h2>
         <div>
-            <p>git merge --ff-only # my favorite :)</p>
-            <p>git merge --ff # default</p>
-            <p>git merge --no-ff</p>
+            <p><code>git merge --ff-only # my favorite :)</code></p>
+            <p><code>git merge --ff # default</code></p>
+            <p><code>git merge --no-ff</code></p>
         </div>
     </section>
     
@@ -69,30 +69,30 @@ transition: slide
     <section>
     	<h2>How much do you hate your changes?</h2>
         <div>
-            <p>git reset commitsha</p>
-            <p>git reset HEAD^1</p>
-            <p>git reset HEAD^1 --soft</p>
-            <p>git reset HEAD^1 --hard</p>
+            <p><code>git reset commitsha</code></p>
+            <p><code>git reset HEAD^1</code></p>
+            <p><code>git reset HEAD^1 --soft</code></p>
+            <p><code>git reset HEAD^1 --hard</code></p>
         </div>
     </section>
     
     <section>
     	<h2>The nuclear option</h2>
         <div>
-            <p>`git clean -dfx`</p>
+            <p><code>git clean -dfx</code></p>
         </div>
     </section>
 
     <section>
     	<h2>Just a single file?</h2>
         <div>
-            <p>git checkout file.txt</p>
-            <p>git checkout -- file-with-same-name-as-branch</p>
+            <p><code>git checkout file.txt</code></p>
+            <p><code>git checkout -- file-with-same-name-as-branch</code></p>
         </div>
     </section>
     
     <section>
-    	<h2>OK, what does `git checkout -` do?</h2>
+    	<h2>OK, what does <code>git checkout -</code> do?</h2>
         <div>
         </div>
     </section>
@@ -100,10 +100,10 @@ transition: slide
     <section>
     	<h2>My pull request for my feature branch has merge conflicts</h2>
         <div>
-            <p>git stash save "Any changes I might have in progress"</p>
-            <p>git rebase master</p>
+            <p><code>git stash save "Any changes I might have in progress"</code></p>
+            <p><code>git rebase master</code></p>
             <p>Resolve merge conflicts</p>
-            <p>git rebase --continue</p>
+            <p><code>git rebase --continue</code></p>
             <p>Note: This replaces a commit!!</p>
         </div>
     </section>
@@ -111,7 +111,7 @@ transition: slide
     <section>
     	<h2>Amending commits</h2>
         <div>
-            <p>git commit --amend</p>
+            <p><code>git commit --amend</code></p>
             <p>You get to change the contents of the commit and/or change the commit message</p>
             <p>Note: This replaces a commit!!</p>
         </div>
@@ -129,7 +129,7 @@ transition: slide
     <section>
     	<h2>Help? My push is being rejected after I replaced a commit?</h2>
         <div>
-            <p>Use `git push --force-with-lease`</p>
+            <p>Use <code>git push --force-with-lease</code></p>
         </div>
     </section>
 
@@ -152,7 +152,7 @@ transition: slide
     	<h2>Problem: Anyone can commit as anyone</h2>
         <div>
             <p>All you have to do is change user.name and user.email</p>
-            <p>git-blame-someone-else makes trolling easy</p>
+            <p><a href="https://github.com/jayphelps/git-blame-someone-else">git-blame-someone-else</a> makes trolling easy</p>
         </div>
     </section>
     
@@ -167,35 +167,46 @@ transition: slide
     <section>
     	<h2>Configure git for use with GPG</h2>
         <div>
-            <p>`git config --global user.signingkey KEYIDHERE`</p>
+            <p><code>git config --global user.signingkey KEYIDHERE</code></p>
         </div>
     </section>
     
     <section>
     	<h2>Now, you can sign your commits!</h2>
         <div>
-            <p>`git commit -S`</p>
+            <p><code>git commit -S</code></p>
         </div>
     </section>
     
     <section>
     	<h2>Profit!</h2>
         <div>
-            <p>`git log --show-signature`</p>
+            <p><code>git log --show-signature</code></p>
             <p>Add your public key to your GitHub account and verify signatures in the GitHub UI</p>
         </div>
     </section>
     
     <section>
-    	<h2>Hub</h2>
+    	<h2>Want to be even more of a commit snob?</h2>
         <div>
-            <p>`hub clone caffeine-overload/bandinchina`</p>
-            <p>`hub fetch origin,upstream`</p>
-            <p>`hub pull-request`</p>
+            <p>Use imperative tense</p>
+            <p>"Do the thing" instead of "I did the thing"</p>
+        </div>
+    </section>
+    
+    <section>
+    	<h2><a href="https://hub.github.com/">Hub</a></h2>
+        <div>
+            <p><code>hub clone caffeine-overload/bandinchina</code></p>
+            <p><code>hub fetch origin,upstream</code></p>
+            <p><code>hub pull-request</code></p>
         </div>
     </section>
     
     <section>
         <h1>Thank You</h1>
+        <div style="font-size:x-small">
+            <p>Xi Jinping looks like Winnie the Pooh</p>
+        </div>
     </section>
 </section>
