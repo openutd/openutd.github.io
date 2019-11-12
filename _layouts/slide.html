@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
-    <head>
-        <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-        <title>
-            {% if page.title %}
-            {{ page.title }} | {{ site.title }}
-            {% else %}
-            {{ site.title }}
-            {% endif %}
-        </title>
+    <title>
+      {% if page.title %}
+      {{ page.title }} | {{ site.title }}
+      {% else %}
+      {{ site.title }}
+      {% endif %}
+    </title>
 
-        <meta name="author" content="{{ site.author }}" />
+    <meta name="author" content="{{ site.author }}" />
 
-        <!-- Description -->
-        {% if page.description %}
-        <meta name="description" content="{{ page.description }}" />
+    <!-- Description -->
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="{{ "/reveal.js/css/reveal.css" | prepend: site.baseurl }}"/>
+    {% if page.theme %}
+    <link rel="stylesheet" href="{{ "/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
+    {% else %}
+    <link rel="stylesheet" href="{{ "/reveal.js/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
+    {% endif %}
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="{{ "/reveal.js/lib/css/zenburn.css" | prepend: site.baseurl }}"/>
+
+    <!-- Theme override -->
+    {% if page.theme-override %}
+    <link rel="stylesheet" href="{{ "/slides/css/" | prepend: site.baseurl | append: page.theme-override | append: '.css' }}"
+                           {% endif %}
+
+                           <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match(/print-pdf/gi) ? '{{ "/reveal.js/css/print/pdf.css" | prepend: site.baseurl }}' : '{{ "/reveal.js/css/print/paper.css" | prepend: site.baseurl }}';
+document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}" />
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+    <script src="{{ "/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
+
+    <div class="reveal">
+      <div class="slides">
+        {{ content }}
+      </div>
+    </div>
+
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        {% if page.controls %}
+        controls: '{{page.controls}}',
         {% else %}
-        <meta name="description" content="{{ site.description }}">
+        controls: false,
+        {% endif %}
+        progress: true,
+        history: true,
+        center: true,
+        {% if page.transition %}
+        transition: '{{page.transition}}',
+        {% else %}
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
         {% endif %}
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          TeX: {
+            extensions: ["AMSmath.js", "AMSsymbols.js"],
+          }
+        },
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        multiplex: {
+          secret: null,
+          id: '7cd5f0a9c5cca22e',
+          url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+        },
 
-        <link rel="stylesheet" href="{{ "/reveal.js/css/reveal.css" | prepend: site.baseurl }}"/>
-        {% if page.theme %}
-        <link rel="stylesheet" href="{{ "/reveal.js/css/theme/" | prepend: site.baseurl | append: page.theme | append: '.css' }}" id="theme"/>
-        {% else %}
-        <link rel="stylesheet" href="{{ "/reveal.js/css/theme/black.css" | prepend: site.baseurl }}" id="theme"/>
-        {% endif %}
-
-        <!-- Code syntax highlighting -->
-        <link rel="stylesheet" href="{{ "/reveal.js/lib/css/zenburn.css" | prepend: site.baseurl }}"/>
-
-        <!-- Theme override -->
-        {% if page.theme-override %}
-        <link rel="stylesheet" href="{{ "/slides/css/" | prepend: site.baseurl | append: page.theme-override | append: '.css' }}"
-              {% endif %}
-
-        <!-- Printing and PDF exports -->
-        <script>
-         var link = document.createElement('link');
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match(/print-pdf/gi) ? '{{ "/reveal.js/css/print/pdf.css" | prepend: site.baseurl }}' : '{{ "/reveal.js/css/print/paper.css" | prepend: site.baseurl }}';
-         document.getElementsByTagName('head')[0].appendChild(link);
-        </script>
-
-        <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}" />
-
-        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    </head>
-
-    <body>
-        <script src="{{ "/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
-
-        <div class="reveal">
-            <div class="slides">
-                {{ content }}
-            </div>
-        </div>
-
-        <script>
-         // Full list of configuration options available at:
-         // https://github.com/hakimel/reveal.js#configuration
-         Reveal.initialize({
-             controls: true,
-             progress: true,
-             history: true,
-             center: true,
-             {% if page.transition %}
-             transition: '{{page.transition}}',
-             {% else %}
-             transition: 'slide', // none/fade/slide/convex/concave/zoom
-             {% endif %}
-
-             multiplex: {
-                 secret: null,
-                 id: '7cd5f0a9c5cca22e',
-                 url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
-             },
-
-             dependencies: [
-                 { src: '{{ "/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
-                 { src: '{{ "/reveal.js/plugin/markdown/marked.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-                 { src: '{{ "/reveal.js/plugin/markdown/markdown.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-                 { src: '{{ "/reveal.js/plugin/highlight/highlight.js" | prepend: site.baseurl }}', async: true, condition: function() { return !!document.querySelector('pre code'); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-                 { src: '{{ "/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
-                 { src: '{{ "/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true },
-                 { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
-                 { src: '{{ "/reveal.js/plugin/multiplex/client.js" }}', async: true }
-             ]
-         });
-        </script>
-    </body>
+        dependencies: [
+          { src: '{{ "/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
+          { src: '{{ "/reveal.js/plugin/markdown/marked.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+          { src: '{{ "/reveal.js/plugin/markdown/markdown.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+          { src: '{{ "/reveal.js/plugin/highlight/highlight.js" | prepend: site.baseurl }}', async: true, condition: function() { return !!document.querySelector('pre code'); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '{{ "/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
+          { src: '{{ "/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true },
+          { src: '{{ "/reveal.js/plugin/math/math.js" | prepend: site.baseurl }}', async: true },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+          { src: '{{ "/reveal.js/plugin/multiplex/client.js" }}', async: true }
+        ]
+      });
+    </script>
+  </body>
 
 </html>
