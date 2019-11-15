@@ -2,6 +2,7 @@
 title: Git for Mere Mortals
 location: UTD Makerspace
 time: 7-8pm
+slides: /slides/git-for-mere-mortals.html
 categories:
 - Talk
 ---
