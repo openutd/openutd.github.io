@@ -6,6 +6,8 @@ theme: white
 theme-override: quantum-computation
 transition: none
 controls: false
+width: 100%
+height: 100%
 ---
 
 <section>
@@ -14,39 +16,557 @@ controls: false
 </section>
 
 <section>
-  <p class="equation">
-  \begin{equation*}
-  \hspace{-1cm}W = \int_{k\lt\Delta}[Dg][DA][D\psi][D\Phi]\exp{\Bigl\{i\int d^4x\sqrt{-g}\Bigl[\frac{m_p^2}{2}R \\[2cm]
-  \hspace{-19cm}-\frac{1}{4}F^a_{\mu\nu}F^{a\mu\nu} + i\bar{\psi}^i\gamma^\mu D_\mu\psi^i + \Bigl(\bar{\psi}_L^i V_{ij}\Phi\psi_R^j+\text{h.c.}\Bigr) - |D_\mu\Phi|^2 - V(\Phi) \\[2cm]
-  \hspace{-9cm}+D_\mu A^\mu N(\tilde{K}) - A_\mu F^\mu\Bigr]\Bigr\}}
-  \end{equation*}
-  </p>
+  <div class="equation">
+    <img src="assets/meme_equation.svg" width="100%">
+    <svg>
+      <line x1="64%" y1="28%" x2="74%" y2="28%"/>
+      <text x="63%" y="34%" fill="red">spacetime</text>
+    </svg>
+    <svg>
+      <line x1="76%" y1="28%" x2="82%" y2="28%"/>
+      <text x="75.5%" y="34%" fill="red">gravity</text>
+    </svg>
+    <svg>
+      <line x1="12%" y1="54.5%" x2="24%" y2="54.5%"/>
+      <text x="15%" y="60.5%" fill="red">forces</text>
+    </svg>
+    <svg>
+      <line x1="28%" y1="54.5%" x2="67%" y2="54.5%"/>
+      <text x="43%" y="60.5%" fill="red">matter</text>
+    </svg>
+    <svg>
+      <line x1="71.5%" y1="54.5%" x2="89%" y2="54.5%"/>
+      <text x="77.75%" y="60.5%" fill="red">Higgs</text>
+    </svg>
+    <svg>
+      <line x1="38%" y1="78%" x2="62%" y2="78%"/>
+      <text x="46.5%" y="84%" fill="red">memes</text>
+    </svg>
+  </div>
 
-  <svg class="fragment fade-in" height="70" width="185" style="top:10.5rem;right:8.5rem">
-    <line x1="0" y1="15" x2="100vw" y2="15" style="stroke:rgb(255,0,0);stroke-width:4"/>
-    <text x="0" y="50" fill="red">spacetime</text>
-  </svg>
-  <svg class="fragment fade-in" height="70" width="130" style="top:10.5rem;right:-1.5rem">
-    <line x1="0" y1="15" x2="100vw" y2="15" style="stroke:rgb(255,0,0);stroke-width:4"/>
-    <text x="0" y="50" fill="red">gravity</text>
-  </svg>
-  <svg class="fragment fade-in" height="70" width="170" style="top:21rem;left:-7rem">
-    <line x1="0" y1="15" x2="100vw" y2="15" style="stroke:rgb(255,0,0);stroke-width:4"/>
-    <text x="30" y="50" fill="red">forces</text>
-  </svg>
-  <svg class="fragment fade-in" height="70" width="580" style="top:21rem;left:10rem">
-    <line x1="0" y1="15" x2="100vw" y2="15" style="stroke:rgb(255,0,0);stroke-width:4"/>
-    <text x="220" y="50" fill="red">matter</text>
-  </svg>
-  <svg class="fragment fade-in" height="70" width="280" style="top:21rem;right:-7rem">
-    <line x1="0" y1="15" x2="100vw" y2="15" style="stroke:rgb(255,0,0);stroke-width:4"/>
-    <text x="95" y="50" fill="red">Higgs</text>
-  </svg>
-  <svg class="fragment fade-in" height="70" width="380" style="top:30.5rem;right:21rem">
-    <line x1="0" y1="15" x2="100vw" y2="15" style="stroke:rgb(255,0,0);stroke-width:4"/>
-    <text x="135" y="50" fill="red">memes</text>
-  </svg>
+  <script>
+    $(".reveal svg").addClass("fragment")
+  </script>
 </section>
 
 <section>
+  <p class="fragment">
+  So before we get started...<br>
+  <span class="fragment">I need you all to make a promise</span>
+  </p>
 </section>
+
+<section>
+  <h3>
+    <em>
+      "I will not think about Schrödinger's cat<br>for the duration of this talk"
+    </em>
+  </h3>
+</section>
+
+<section>
+  <p>Part One:</p>
+  <h2>Classical Computation</h2>
+</section>
+
+<section>
+  <p>
+  Classical computation is modeled via a <em>Turing Machine</em>
+  </p>
+  <p class="fragment">
+  The <em>Church-Turing thesis</em> posits that a Turing Machine<br>
+  can be used to simulate any algorithmic process
+  </p>
+</section>
+
+<section>
+  <p>
+  However, we spend a lot of our time<br>as computer scientists wondering...
+  </p>
+  <p class="fragment">
+  How can our algorithms and calculations be done<br><em>as efficiently as possible</em>
+  </p>
+</section>
+
+<section>
+  <h3>
+    <em>
+      Any algorithmic process<br>that can be simulated
+      efficiently<br>can be done so on a Turing machine
+    </em>
+  </h3>
+</section>
+
+<section>
+  <p>
+  The first challenge:
+  <span class="fragment">Analog Computation</span>
+  </p>
+</section>
+
+<section>
+  <p>
+  Analog computers taught us that <em>realistic noise</em><br>must be taken
+  into account when evaluating<br>the efficiency of a computational model
+  </p>
+</section>
+
+<section>
+  <p>
+  The second challenge:
+  <span class="fragment">Randomized Algorithms</span>
+  </p>
+</section>
+
+<section>
+  <p>During the 1970s...</p>
+  <p class="fragment">
+  The <em>Solovay-Strassen primality test</em> was developed to<br>
+  to test whether an integer $n$ was prime
+  </p>
+</section>
+
+<section>
+  <p>
+  However, the Solovay-Strassen test<br>doesn't give results with absolute
+  certainty...
+  </p>
+  <p class="fragment">
+  Instead, the probability of failure is at most $2^{-k}$
+  </p>
+</section>
+
+<section>
+  <h3>
+    <em>
+      Any algorithmic process<br>that can be simulated
+      efficiently<br>can be done so on a probabilistic Turing machine
+    </em>
+  </h3>
+</section>
+
+<section>
+  <p>
+  How about instead of taking a "top-down" approach the this problem...
+  </p>
+  <p class="fragment">
+  We instead take a "bottom-up" approach?
+  </p>
+</section>
+
+<section>
+  <p>
+  What if the Church-Turing thesis<br>could be <em>derived</em> from the laws
+  of physics?
+  </p>
+</section>
+
+<section>
+  <p>Part Two:</p>
+  <h2>Quantum Bits</h2>
+</section>
+
+<section>
+  <p>
+  In Quantum Mechanics,<br>
+  <span class="fragment">
+  the state of a system is encoded by a <em>wavefunction</em>, $|\psi\rangle$
+  </span>
+  </p>
+</section>
+
+<section>
+  <p>
+  A wavefunction is a function<br><em>that can be treated the same way as a
+    vector</em>
+  </p>
+</section>
+
+<section>
+  <p>
+  <span style="margin-right:50%">
+    This means that...
+  </span>
+  <ol>
+    <li class="fragment">
+      You can form new states by taking a<br><em>linear combination</em> of other states:
+      $$\hspace{-1cm}|\psi\rangle = \alpha|\phi_1\rangle + \beta|\phi_2\rangle$$
+    </li>
+    <li class="fragment">
+      You can take the <em>dot product</em><br>(or <em>inner product</em>) of two states:
+      $$\hspace{-1cm}\langle\psi|\phi\rangle$$
+    </li>
+  </ol>
+  </p>
+</section>
+
+<section>
+  <p>
+  The basic rules for the states of a quantum system:
+  </p>
+  <ol>
+    <li class="fragment">
+      There must only be a <em>discrete</em> number of possible states
+    </li>
+    <li class="fragment">
+      The system can only be in <em>one</em> of these states when observed
+    </li>
+  </ol>
+</section>
+
+<section>
+  <p style="margin-right:50%">
+  An example...
+  </p>
+  <p class="fragment">
+  Suppose we are modeling an electron's <em>spin</em>...
+  </p>
+  <div class="container fragment" style="margin-top:5rem">
+    <p>
+    <em>Spin up</em>
+    </p>
+    <p>
+    $\longrightarrow$
+    </p>
+    <p>
+    $|1\rangle$
+    </p>
+  </div>
+  <div class="fragment">
+    <hr style="width:70%">
+    <div class="container">
+      <p>
+      <em>Spin down</em>
+      </p>
+      <p>
+      $\longrightarrow$
+      </p>
+      <p>
+      $|0\rangle$
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p>
+  1. There must only be a <em>discrete</em> number of possible states
+  </p>
+  <p class="fragment">
+  $\Longrightarrow$ systems can be represented<br>
+  as a <em>linear combination</em> of these possible states
+  $$|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$$
+  </p>
+</section>
+
+<section>
+  <p>
+  2. The system can only be in <em>one</em> of these states when observed
+  </p>
+  <p class="fragment">
+  $\Longrightarrow$ all states must have a <em>magnitude of one</em>
+  $$\langle\psi|\psi\rangle = |\alpha|^2 + |\beta|^2 = 1$$
+  </p>
+</section>
+
+<section>
+  <p style="margin-right:50%">
+  In other words...
+  </p>
+  <div class="fragment" style="margin-top:5rem">
+    <div class="container">
+      <p>$|\alpha|^2$</p>
+      <p>$\longrightarrow$</p>
+      <p>Probability that state is <em>spin down</em>, $|0\rangle$</p>
+    </div>
+    <hr style="width:70%">
+    <div class="container">
+      <p>$|\beta|^2$</p>
+      <p>$\longrightarrow$</p>
+      <p>Probability that state is <em>spin up</em>, $|1\rangle$</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <img src="assets/qubit.svg" width="30%">
+</section>
+
+<section>
+  <p>
+  The quantum properties of a system can only be maintained<br>
+  while the system remains unobserved
+  </p>
+</section>
+
+<section>
+  <p>
+  The key insight: <em class="fragment">Who said we needed to observe it?</em>
+  </p>
+</section>
+
+<section>
+  <p>Part Three:</p>
+  <h2>Quantum Circuits</h2>
+</section>
+
+<section>
+  <p>
+  We'll start with the simplest single-qubit logic gate: <span class="fragment">the <code>not</code> gate</span>
+  </p>
+</section>
+
+<section>
+  <p>
+  Take the qubit we already established:
+  $$|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$$
+  </p>
+</section>
+
+<section>
+  <p>
+  Represent the state $|\psi\rangle$ as an ordinary vector<br>
+  since we know that there are only two possible states:
+  $$\alpha|0\rangle + \beta|1\rangle \longrightarrow
+  \begin{bmatrix} \alpha \\ \beta \end{bmatrix}$$
+  </p>
+</section>
+
+<section>
+  <p>
+  Then all we need to do is define a transformation $X$ such that:
+  $$X\begin{bmatrix} \alpha \\ \beta \end{bmatrix}
+  = \begin{bmatrix} \beta \\ \alpha \end{bmatrix}$$
+  </p>
+  <p class="fragment">
+  or, equivalently...
+  $$\alpha|0\rangle + \beta|1\rangle \quad \longrightarrow
+  \quad \beta|0\rangle + \alpha|1\rangle$$
+  </p>
+</section>
+
+<section>
+  <p style="margin-right: 50%">
+  That's easy...
+  </p>
+  <p class="fragment">
+  $$X = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$$
+  </p>
+</section>
+
+<section>
+  <p>
+  What are the limitations to how we can transform quantum states?
+  </p>
+</section>
+
+<section>
+  <p>
+  Recall that all we really ask from a state is that it be <em>normalized</em><br>
+  (i.e. that its magnitude is one)
+  </p>
+</section>
+
+<section>
+  <p>
+  Thus, all we ask from transformations is that they are <em>unitary</em>:
+  $$U^\dagger U = I$$
+  </p>
+</section>
+
+<section>
+  <p>
+  This has a couple interesting consequences...
+  </p>
+  <ol>
+    <li class="fragment">
+      There is significantly more flexibility to the types of gates that are possible
+    </li>
+    <li class="fragment">
+      Quantum logic gates must always be <em>reversible</em>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <p>Some example single-qubit gates...</p>
+  <p class="fragment" style="margin-top:3rem">
+  The <em>Z</em> gate: $\quad Z = \begin{bmatrix}1 & 0 \\ 0 & -1\end{bmatrix}$
+  </p>
+  <p class="fragment" style="margin-top:3rem">
+  The <em>Hadamard</em> gate: $\quad H = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}$
+  </p>
+</section>
+
+<section>
+  <img src="assets/gate_list.svg" width="60%">
+</section>
+
+<section>
+  <p style="margin-right:50%">
+  Let's move on to a new system...
+  </p>
+  <p class="fragment">
+  Let $|\psi\rangle$ represent the spins of <em>two</em> independent electrons:
+  $$|\psi\rangle = \alpha_{00}|00\rangle + \alpha_{01}|01\rangle + \alpha_{10}|10\rangle + \alpha_{11}|11\rangle
+  \;\longrightarrow\; \begin{bmatrix}\alpha_{00} \\ \alpha_{01} \\ \alpha_{10} \\ \alpha_{11}\end{bmatrix}$$
+  </p>
+</section>
+
+<section>
+  <p>
+  We can therefore define our first multi-qubit gate:
+  <span class="fragment">the <code>cnot</code> gate</span>
+  </p>
+</section>
+
+<section>
+  <p>
+  In a <code>cnot</code> gate, the first qubit is designated the <em>control</em> qubit
+  </p>
+  <p class="fragment">
+  While the second qubit is referred to as the <em>target</em> qubit
+  </p>
+</section>
+
+<section>
+  <img src="assets/cnot.svg" width="70%">
+  <p>
+  $$|A,B\rangle\; \longrightarrow\; |A,B\oplus A\rangle$$
+  </p>
+  <table class="fragment">
+    <tr>
+      <td>$|00\rangle\; \longrightarrow\; |00\rangle$</td>
+      <td>$\quad|01\rangle\; \longrightarrow\; |01\rangle$</td>
+    </tr>
+    <tr>
+      <td>$|10\rangle\; \longrightarrow\; |11\rangle$</td>
+      <td>$\quad|11\rangle\; \longrightarrow\; |10\rangle$</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <p>
+  The <code>cnot</code> gate, together with the set of all single-qubit gates,<br>
+  can be combined to construct any arbitrary quantum gate
+  </p>
+</section>
+
+<section>
+  <p>
+  The second multi-qubit gate:
+  <span class="fragment">the <em>Toffoli</em> gate</span>
+  </p>
+</section>
+
+<section>
+  <img src="assets/toffoli.svg" width="60%">
+</section>
+
+<section>
+  <p>
+  The <em>Toffoli</em> gate can implement the classical <code>nand</code> gate
+  </p>
+  <p class="fragment">
+  Therefore, it can be used to perform any classical computation
+  </p>
+</section>
+
+<section>
+  <p>
+  So let's build a simple circuit
+  </p>
+</section>
+
+<section>
+  <p>
+  Suppose we have some block $U_f$ such that
+  $$|x,y\rangle \longrightarrow |x,y\oplus f(x)\rangle$$
+  where $f$ is a function that maps one bit to one bit
+  </p>
+</section>
+
+<section>
+  <p>
+  A huge advantage to quantum circuits is <em>quantum parallelism</em>
+  </p>
+  <p class="fragment">
+  This allows quantum circuits to calculate a<br>function $f$ for different inputs simultaneously
+  </p>
+</section>
+
+<section>
+  <img src="assets/parallelism.svg" width="80%">
+</section>
+
+<section>
+  <p>Part 4:</p>
+  <h2>Limitations</h2>
+</section>
+
+<section>
+  <p>
+  Since all quantum transformations must be reversible...
+  </p>
+  <p class="fragment">
+  This implies that information cannot be either<br>
+  <em>created</em> or <em>destroyed</em> in a quantum circuit
+  </p>
+</section>
+
+<section>
+  <p>
+  This also implies the <em>no-cloning</em> theorem:
+  </p>
+  <p class="fragment">
+  It is <em>impossible</em> to make a copy of an unknown quantum state
+  </p>
+</section>
+
+<section>
+  <p>
+  Lastly,
+  <span class="fragment">
+    it is also <em>impossible</em> to build<br>quantum circuits that involve feedback
+  </span>
+  </p>
+</section>
+
+<section>
+  <p>
+  All in all...
+  <span class="fragment">how feasible is quantum computing <em>really</em>?</span>
+  </p>
+</section>
+
+<section>
+  <p>
+  Is it even worth it?
+  </p>
+  <p>
+  <em class="fragment">
+    We don't know
+  </em>
+  </p>
+</section>
+
+<section>
+  <p>
+  Recommended reading...
+  </p>
+  <div class="fragment">
+    <h3>
+      <em>
+        Quantum Computation and Quantum Information
+      </em>
+    </h3>
+    <p>
+    Michael A. Nielsen & Isaac L. Chuang
+    </p>
+  </div>
+</section>
+
+<script>
+  $(".fragment").addClass("fade-in")
+</script>

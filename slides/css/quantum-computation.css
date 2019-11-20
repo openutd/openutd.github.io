@@ -40,26 +40,50 @@ body {
   text-transform: none;
 }
 
-.reveal section img {
-  border: none;
+.reveal code {
+  font-variant: small-caps;
 }
 
-.reveal .question-mark {
-  position: absolute;
-  font-size: 0.6em;
-  opacity: 0.5;
+tr {
+  line-height: 2;
+}
+
+.reveal section img {
+  border: none;
+  box-shadow: none;
 }
 
 .reveal svg {
   position: absolute;
+  left: 5%;
+  width: 90%;
+  min-height: 100%;
 }
 
-#footer {
-  font-family: "Computer Modern";
-  font-weight: 200;
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  font-size: x-large;
-  background-color: #f3f3f3;
+.reveal svg line {
+  stroke: rgb(255,0,0);
+  stroke-width: 4;
+}
+
+.reveal svg text {
+  font-size: 28pt;
+}
+
+.equation {
+  margin: 15px auto;
+  width: 90%;
+}
+
+.container {
+  display: table;
+  table-layout: fixed;
+  flex-wrap: nowrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.container > p {
+  display: table-cell;
+  width: 100%;
+  justify-content: center;
 }
