@@ -2,6 +2,7 @@
 title: A Layman's Introduction to Quantum Computing
 location: UTD Makerspace
 time: 6:30-8pm
+slides: /slides/quantum-computation.html
 categories:
 - Talk
 ---
