@@ -33,7 +33,8 @@ transition: slide
     <section>
         <h2>refs</h2>
         <div>
-            <p><b>ref</b> is short for reference</p>
+            <p>ref is short for reference</p>
+            <p>A ref is kind of like an alias for a commit</p>
             <p>Just like anything else in Linux, a ref is actually a file</p>
             <p>You can find each ref in the <code>.git</code> directory</p>
         </div>
@@ -77,27 +78,24 @@ transition: slide
         <aside class="notes">Demo it!</aside>
     </section>
     <section>
+        <h2>refs: opening the hood</h2>
+        <div>
+            <p>Since refs are just plain text files, you can read them with a text editor</p>
+            <p>You may see</p>
+            <ul>
+                <li>refs: path/to/other/ref</li>
+                <li>A commit hash</li>
+            </ul>
+        </div>
+        <aside class="notes">Words hash and SHA are used interchangeably. You might see more than one ref if packing is involved. We'll talk about that later. Mention refs may have been put in .git/packed-refs. Demo it!</aside>
+    </section>
+    <section>
         <h2>refs: sticking your hand in the engine</h2>
         <div>
             <p>You can manually modify and create refs by editing files in <code>.git/</code></p>
             <p>Don't do this in any repos you actually care about</p>
         </div>
         <aside class="notes">Create PP ref. Show how you can use refs/heads/branch-name. Checkout into a ref.</aside>
-    </section>
-</section>
-
-<section>
-   <section>
-        <h2>Let's look around the .git/ directory</h2>
-        <div>
-            <p><b>branches:</b> This one is deprecated. git doesn't use this directory anymore.</p>
-            <p><b>hooks:</b> contains scripts that git will run when certain actions occur.</p>
-            <p><b>info:</b> contains configuration files such as exclude</p>
-            <p><b>logs:</b> contains reflog data (More on this later)</p>
-            <p><b>objects:</b> git objects! (More on this later)</p>
-            <p><b>refs:</b> your tags, branches... all those things which are actually just refs.</p>
-        </div>
-        <aside class="notes">Alright, let's take a look around the engine bay. Open a git repo and look at the directories.</aside>
     </section>
 </section>
 
@@ -118,10 +116,13 @@ transition: slide
     
     <section>
         <h2>Types of git objects</h2>
-        <div>
+        <div align="left">
             <p>Commit objects</p>
             <p>Tree objects</p>
             <p>Blob objects</p>
+        </div>
+        <div align="right">
+            <img src="https://aboullaite.me/content/images/2017/06/git-objects.png">
         </div>
     </section>
     
@@ -130,13 +131,14 @@ transition: slide
         <div>
             <p>This contains the metadata of the commit and points to a tree object</p>
         </div>
-        <aside class="notes">Show with git cat-file -p</aside>
+        <aside class="notes">Show with git cat-file -p.</aside>
     </section>
     
     <section>
         <h2>Tree objects</h2>
         <div>
             <p>Trees can have other trees and/or blobs as children. They represent directories.</p>
+            <img src="https://git-scm.com/book/en/v2/images/data-model-1.png">
         </div>
         <aside class="notes">Use the word "point" just like in the last slide. Show with git cat-file -p</aside>
     </section>
@@ -144,9 +146,23 @@ transition: slide
     <section>
         <h2>Blob objects</h2>
         <div>
-            <p>This is actually just the (compressed) contents of a file being tracked</p>
+            <p>These contain the (compressed) contents of a file being tracked</p>
         </div>
         <aside class="notes">The Pro Git book describes git as a "content-addressable filesystem." Git is very good at storing files as a key-value pair with the hash of the file as the key and the file's contents as the value. Git does not actually store deltas. It actually just stores the files as you've written them.</aside>
+    </section>
+    
+    <section>
+        <h2>Here's what the object graph looks like</h2>
+        <div>
+            <img src="https://git-scm.com/book/en/v2/images/data-model-3.png">
+        </div>
+    </section>
+    
+    <section>
+        <h2>Here's the big picture</h2>
+        <div>
+            <img src="https://git-scm.com/book/en/v2/images/data-model-4.png">
+        </div>
     </section>
     
     <section>
@@ -158,28 +174,44 @@ transition: slide
 
 <section>
     <section>
-        <h2>We ought to be efficient with disk space</h2>
+        <h2>OK, now for some useful tips</h2>
         <div>
             <p></p>
         </div>
     </section>
+
+     <section>
+        <h2>reflog</h2>
+        <div>
+            <p>The reflog keeps track of almost everything you do with refs</p>
+            <p>You can see the history with <code>git reflog</code></p>
+            <p>You can go back in time by checking out objects and refs from the reflog</p>
+        </div>
+        <aside class="notes">(Almost) nothing is truly gone! Don't forget to demo it!</aside>
+    </section>
     
     <section>
-        <h2>Garbage Collection & Packed Refs</h2>
+        <h2>Garbage Collection</h2>
         <div>
-            <p>Git has a garbage collector which will remove unused objects and move your refs into the file .git/packed-refs</p>
+            <p>The garbage collector helps conserve disk space</p>
+            <p>Git has a garbage collector which will remove unused objects, prune the reflog and move refs into the file .git/packed-refs</p>
+            <p>Many of git's commands will automatically invoke the garbage collector</p>
+            <p>The garbage collector can be run manually with <code>git gc</code></p>
+            <p>Warning: now there's actually no going back</p>
         </div>
-        <aside class="notes">As previously mentioned, objects are compressed using zlib.</aside>
+        <aside class="notes">As previously mentioned, objects are already compressed using zlib. You do not need to use this often. If time allows, talk about removing initial commit by deleting branch ref</aside>
     </section>
 </section>
 
 <section> 
      <section>
-        <h2>OK, now for a useful tip</h2>
+        <h2>To sum it all up</h2>
         <div>
-            <p>git reflog</p>
+            <p>refs can point to other refs or commit objects</p>
+            <p>commit objects can point to other commit objects and trees</p>
+            <p>tree objects can point to other trees or blobs</p>
+            <p>blob objects contain the contents of the files in the git repository</p>
         </div>
-        <aside class="notes">If time allows, talk about removing initial commit by deleting branch ref</aside>
     </section>
 </section>
 
