@@ -119,10 +119,12 @@ transition: slide
     <section>
         <h2>Types of git objects</h2>
         <div>
-            <img src="https://aboullaite.me/content/images/2017/06/git-objects.png" height="75%" width="75%" style="float:right">
-            <p>Commit objects</p>
-            <p>Tree objects</p>
-            <p>Blob objects</p>
+            <img src="https://aboullaite.me/content/images/2017/06/git-objects.png" height="50%" width="50%" style="float:right">
+            <ul>
+                <li>Commit objects</li>
+                <li>Tree objects</li>
+                <li>Blob objects</li>
+            </ul>
         </div>
     </section>
     
@@ -138,7 +140,7 @@ transition: slide
         <h2>Tree objects</h2>
         <div>
             <p>Trees can have other trees and/or blobs as children. They represent directories.</p>
-            <img src="https://git-scm.com/book/en/v2/images/data-model-1.png" height="75%" width="75%">
+            <img src="https://git-scm.com/book/en/v2/images/data-model-1.png" height="60%" width="60%">
         </div>
         <aside class="notes">Use the word "point" just like in the last slide. Show with git cat-file -p</aside>
     </section>
@@ -154,7 +156,7 @@ transition: slide
     <section>
         <h2>Here's what the object graph looks like</h2>
         <div>
-            <img src="https://git-scm.com/book/en/v2/images/data-model-3.png" height="75%" width="75%">
+            <img src="https://git-scm.com/book/en/v2/images/data-model-3.png" height="65%" width="65%">
         </div>
     </section>
     
@@ -193,8 +195,13 @@ transition: slide
     <section>
         <h2>Garbage Collection</h2>
         <div>
-            <p>The garbage collector helps conserve disk space</p>
-            <p>Git has a garbage collector which will remove unused objects, prune the reflog and move refs into the file .git/packed-refs</p>
+            <p>Git's garbage collector helps conserve disk space</p>
+            <p>The garbage collector which will remove unused objects, prune the reflog and move refs into the file .git/packed-refs</p>
+        </div>
+    </section>
+    <section>
+        <h2>Garbage Collection</h2>
+        <div>
             <p>Many of git's commands will automatically invoke the garbage collector</p>
             <p>The garbage collector can be run manually with <code>git gc</code></p>
             <p>Warning: now there's actually no going back</p>
