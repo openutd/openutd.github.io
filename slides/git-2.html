@@ -1,8 +1,9 @@
 ---
 layout: slide
-title: Git: Under The Hood
+title: Git Under The Hood
 description: A presentation about Git
 theme: white
+theme-override: git-2
 transition: slide
 ---
 
@@ -53,21 +54,21 @@ transition: slide
             <p>Many of you have probably interacted with HEAD</p>
             <p>HEAD is actually just a (special) ref!</p>
         </div>
-        <section>
-            <h2>Wait. What's a tag?</h2>
-            <div>
-                <p>It's basically just a <b>fancy alias for a commit</b></p>
-                <p>Project maintainers often tag the last commit of a version</p>
-                <p><code>git tag v1.0.1</code></p>
-            </div>
-        </section>
-        <section>
-            <h2>Wait. What's HEAD?</h2>
-            <div>
-                <p>It's basically just a fancy alias for the <b>most recent commit</b></p>
-                <p><code>git reset HEAD</code> will reset back to the most recent commit</p>
-            </div>
-        </section>
+    </section>
+    <section>
+        <h2>Wait. What's a tag?</h2>
+        <div>
+            <p>It's basically just a <b>fancy alias for a commit</b></p>
+            <p>Project maintainers often tag the last commit of a version</p>
+            <p><code>git tag v1.0.1</code></p>
+        </div>
+    </section>
+    <section>
+        <h2>Wait. What's HEAD?</h2>
+        <div>
+            <p>It's basically just a fancy alias for the <b>most recent commit</b></p>
+            <p><code>git reset HEAD</code> will reset back to the most recent commit</p>
+        </div>
     </section>
     <section>
         <h2>refs: opening the hood</h2>
