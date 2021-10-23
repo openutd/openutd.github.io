@@ -85,7 +85,18 @@ transition: slide
 
 <section>
   <section>
-    <h2>.NET Main Libraries</h2>
+    <h2>.NET vs .NET Framework vs .NET Core vs .NET Standard</h2>
+    <p>
+      .NET Framework is the original<br/>
+      .NET Core is the open source, cross-platform fork<br/>
+      .NET Standard is the required features of all .NET Implementations<br/>
+      .NET (by itself) is a rebrand of .NET Core that is also the end of .NET Framework
+    </p>
+</section>
+
+<section>
+  <section>
+    <h2>.NET Major Libraries</h2>
     <ul>
       <li>ASP.NET</li>
       <li>Razor/Blazor</li>
@@ -96,6 +107,76 @@ transition: slide
       <li>Dependency Injection</li>
       <li>Entity Framework</li>
     </ul>
+  </section>
+  <section>
+    <h2>ASP.NET</h2>
+    <p>
+      Web Application Framework<br />
+      Razor/Blazor web pages<br />
+      Web API<br />
+      Controller-Service Architecture
+    </p>
+  </section>
+  <section>
+    <h2>Razor/Blazor</h2>
+    <p>
+      Webpage Desgin Framework<br />
+      Uses HTML, CSS, and JavaScript along with C#<br />
+      Blazor - Serverside rendering and WASM
+    </p>
+  </section>
+  <section>
+    <h2>Xamarin/MAUI</h2>
+    <p>
+      Cross-platform mobile application framework<br />
+      Uses XML for layout<br />
+      MAUI - Cross-platform with Linux
+    </p>
+  </section>
+  <section>
+    <h2>WPF/WinForms/UWP</h2>
+    <p>
+      Windows specific application framework<br />
+      Mostly use XML for layout<br />
+      UWP - Windows Store apps, run on Xbox
+    </p>
+    <aside class="notes">
+      <p>
+        WPF is Windows Presentation Foundation framework. UWP is Universal Windows Platform.<br/>
+        UWP supports using HTML for layout.
+      </p>
+  </section>
+  <section>
+    <h2>Azure</h2>
+    <p>Libraries for accessing and manipulating Azure resources</p>
+  </section>
+  <section>
+    <h2>Linq</h2>
+    <p>
+      Advanced collection processing<br />
+      Supports statements written like SQL<br />
+      Used with EF for intelligent/efficient query generation
+    </p>
+  </section>
+  <section>
+    <h2>Dependency Injection</h2>
+    <p>
+      Technique for resolving dependencies in a loosely coupled way<br />
+      Used with ASP.NET and EF<br/>
+      Basically black magic
+    </p>
+    <aside class="notes">
+      <p>Can get reference to a service without bloilerplate setup or creating a class level reference</p>
+    </aside>
+  </section>
+  <section>
+    <h2>Entity Framework</h2>
+    <p>
+      Database ORM<br />
+      Implementation agnostic<br />
+      Handles migrations and schema desgin<br />
+      Used with ASP.NET and Linq
+    </p>
   </section>
 </section>
 
