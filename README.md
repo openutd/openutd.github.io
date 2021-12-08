@@ -1,6 +1,6 @@
 # openutd-site
 
-Website for <https://open.utdallas.edu>
+Website for <https://openutd.github.io>
 
 ## Building
 
