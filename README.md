@@ -1,6 +1,6 @@
 # openutd-site
 
-Website for <https://openutd.github.io>
+Website for <https://openutd.club>
 
 ## Building
 
