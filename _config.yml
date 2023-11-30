@@ -23,6 +23,7 @@ navigation_header:
   Contact: /contact.html
   Events: /events/
   Categories: /categories.html
+  Atom: /feed.xml
 
 navigation_footer:
   OpenUTD: /
