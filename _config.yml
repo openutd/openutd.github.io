@@ -8,6 +8,7 @@ plugins:
 - jekyll-seo-tag
 - jekyll-default-layout
 - jekyll-include-cache
+- jekyll-feed
 
 encoding: utf-8
 title: OpenUTD
