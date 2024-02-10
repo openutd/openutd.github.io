@@ -6,5 +6,5 @@ categories:
 - Event
 ---
 
-Our next Coding Night is this Friday, February 2, starting at 7:00pm in ECSW 1.355. Come enjoy an evening of 
+Our next Coding Night is this Friday, February 9, starting at 7:00pm in ECSW 1.355. Come enjoy an evening of 
 hanging out and working on homework and personal projects.
